@@ -459,12 +459,18 @@
 
       <!-- Baris 2 -->
       <div class="screenshot-placeholder">
-        <span>Screenshot</span>
+        <img src="{{ asset('images/klinik/beranda.png') }}" alt="Sistem Informasi Klinik">
       </div>
       <div class="exp-item">
         <div class="exp-role">Sistem Informasi Klinik</div>
         <div class="exp-company">Web Based</div>
         <p class="exp-desc">Mengelola Rumah Sakit dan Klinik dengan menggunakan standart HL7 FHIR, ICD10, LOINC dan lain lain</p>
+        <a href="{{ route('klinik-system') }}" class="btn-detail">
+          Detail
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
       </div>
 
     </div>

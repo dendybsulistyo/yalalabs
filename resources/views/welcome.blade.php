@@ -422,7 +422,6 @@
             <span class="tag">MySQL</span>
             <span class="tag">Alpine.js</span>
             <span class="tag">Linux</span>
-            <span class="tag">Nginx</span>
           </div>
         </div>
 
@@ -463,9 +462,9 @@
         <span>Screenshot</span>
       </div>
       <div class="exp-item">
-        <div class="exp-role">Software Engineer</div>
-        <div class="exp-company">Innovation Labs</div>
-        <p class="exp-desc">Architected cloud-native applications for high-traffic financial services. Mentored junior developers and established CI/CD best practices across the engineering department.</p>
+        <div class="exp-role">Sistem Informasi Klinik</div>
+        <div class="exp-company">Web Based</div>
+        <p class="exp-desc">Mengelola Rumah Sakit dan Klinik dengan menggunakan standart HL7 FHIR, ICD10, LOINC dan lain lain</p>
       </div>
 
     </div>

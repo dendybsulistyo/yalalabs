@@ -7,36 +7,30 @@ on:
 
 jobs:
   deploy:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.2.2
-
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-
           script: |
-
             set -e
 
+            echo "== Masuk source code =="
+            cd ${{ secrets.PROJECT_PATH }}
 
-	    echo "== Masuk source code =="
-	    cd ${{ secrets.PROJECT_PATH }}
+            echo "== Update Source =="
+            git fetch origin
+            git reset --hard origin/main
 
-	    echo "== Update Source =="
-	    git fetch origin
-	    git reset --hard origin/main
+            echo "== Masuk Docker =="
+            cd ..
 
-	    echo "== Masuk Docker =="
-	    cd ..
-
-	    echo "== Rebuild Docker =="
-	    docker compose up -d --build
+            echo "== Rebuild Docker =="
+            docker compose up -d --build
 
             echo "== Laravel Optimize =="
             docker exec yala-app php artisan optimize

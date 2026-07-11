@@ -24,14 +24,19 @@ jobs:
 
             set -e
 
-            echo "== Masuk project =="
-            cd ${{ secrets.PROJECT_PATH }}
 
-            echo "== Git Pull =="
-            git pull origin main
+	    echo "== Masuk source code =="
+	    cd ${{ secrets.PROJECT_PATH }}
 
-            echo "== Rebuild Docker =="
-            docker compose up -d --build
+	    echo "== Update Source =="
+	    git fetch origin
+	    git reset --hard origin/main
+
+	    echo "== Masuk Docker =="
+	    cd ..
+
+	    echo "== Rebuild Docker =="
+	    docker compose up -d --build
 
             echo "== Laravel Optimize =="
             docker exec yala-app php artisan optimize

@@ -420,7 +420,7 @@
           <div class="tag-list" style="margin-top:12px;">
             <span class="tag">Laravel</span>
             <span class="tag">MySQL</span>
-            <span class="tag">Alpine.js</span>
+            <span class="tag">Cloudflare</span>
             <span class="tag">Linux</span>
           </div>
         </div>

@@ -1,0 +1,44 @@
+name: Deploy Yala
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.2.2
+
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+          script: |
+
+            set -e
+
+            echo "== Masuk project =="
+            cd ${{ secrets.PROJECT_PATH }}
+
+            echo "== Git Pull =="
+            git pull origin main
+
+            echo "== Rebuild Docker =="
+            docker compose up -d --build
+
+            echo "== Laravel Optimize =="
+            docker exec yala-app php artisan optimize
+
+            echo "== Laravel Cache =="
+            docker exec yala-app php artisan config:cache
+            docker exec yala-app php artisan route:cache
+            docker exec yala-app php artisan view:cache
+
+            echo "== Deployment Finished =="

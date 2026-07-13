@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistem Informasi Klinik — Yala Labs</title>
+<title>Sistem Informasi Sekolah — Yala Labs</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -18,9 +18,9 @@
     --bg: #f7f7f7;
     --tag-bg: #ebebeb;
     --card-bg: #f0f0f0;
-    --teal: #0ea5e9;
-    --teal-dark: #0284c7;
-    --teal-light: #f0f9ff;
+    --teal: #0041a2;
+    --teal-dark: #003080;
+    --teal-light: #eef3ff;
   }
 
   body {
@@ -79,7 +79,7 @@
     letter-spacing: .06em; text-decoration: none; border-radius: 6px;
     transition: background .18s, box-shadow .18s;
   }
-  .btn-primary:hover { background: var(--teal-dark); box-shadow: 0 4px 14px rgba(14,165,233,.35); }
+  .btn-primary:hover { background: var(--teal-dark); box-shadow: 0 4px 14px rgba(0,65,162,.35); }
 
   .btn-secondary {
     display: inline-flex; align-items: center; gap: 8px;
@@ -268,14 +268,13 @@
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
         Web Application
       </div>
-      <h1 class="hero-title">Sistem Informasi<br>Klinik</h1>
-      <p class="hero-desc">Platform terpadu untuk mengelola seluruh operasional klinik — dari pendaftaran pasien, rekam medis elektronik, farmasi, laboratorium, radiologi, hingga kasir dan laporan. Dibangun dengan standar ICD-10, LOINC, dan HL7 FHIR.</p>
+      <h1 class="hero-title">Sistem Informasi<br>Sekolah</h1>
+      <p class="hero-desc">Platform terpadu untuk mengelola seluruh operasional sekolah — dari penerimaan siswa baru (PPDB), data siswa & guru, kelas & tahun ajaran, kenaikan kelas, penjadwalan pelajaran, presensi, hingga input nilai dan rapor digital. Satu sistem untuk admin, guru/wali kelas, dan siswa.</p>
       <div class="tag-list">
-        <span class="tag teal">ICD-10</span>
-        <span class="tag teal">LOINC</span>
+        <span class="tag teal">PPDB Online</span>
         <span class="tag">Web Based</span>
         <span class="tag">Multi Role</span>
-        <span class="tag">HL7 FHIR</span>
+        <span class="tag">Rapor PDF</span>
       </div>
       <div class="hero-actions">
         <a href="#" class="btn-primary">
@@ -286,7 +285,7 @@
       </div>
     </div>
     <div class="hero-image">
-      <img src="{{ asset('images/klinik/beranda.png') }}" alt="Sistem Informasi Klinik">
+      <img src="{{ asset('images/erpsekolah/beranda.png') }}" alt="Sistem Informasi Sekolah">
     </div>
   </div>
 
@@ -297,113 +296,163 @@
     <!-- Tabs -->
     <div class="tab-nav">
       <button class="tab-btn active" data-tab="beranda">
-        Beranda <span class="tab-count">2</span>
+        Beranda &amp; PPDB <span class="tab-count">5</span>
       </button>
-      <button class="tab-btn" data-tab="pasien">
-        Pasien &amp; Pendaftaran <span class="tab-count">4</span>
+      <button class="tab-btn" data-tab="kesiswaan">
+        Kesiswaan &amp; Akademik <span class="tab-count">6</span>
       </button>
-      <button class="tab-btn" data-tab="medis">
-        Rekam Medis <span class="tab-count">2</span>
+      <button class="tab-btn" data-tab="jadwal">
+        Penjadwalan <span class="tab-count">5</span>
       </button>
-      <button class="tab-btn" data-tab="penunjang">
-        Farmasi &amp; Lab <span class="tab-count">2</span>
+      <button class="tab-btn" data-tab="presensi">
+        Presensi <span class="tab-count">3</span>
       </button>
-      <button class="tab-btn" data-tab="admin">
-        Kasir &amp; SDM <span class="tab-count">3</span>
+      <button class="tab-btn" data-tab="nilai">
+        Nilai &amp; Rapor <span class="tab-count">4</span>
       </button>
     </div>
 
-    <!-- Beranda -->
+    <!-- Beranda & PPDB -->
     <div class="tab-panel active" data-panel="beranda">
       <div class="screenshots-grid">
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/beranda.png') }}" data-caption="Landing Page">
-          <img src="{{ asset('images/klinik/beranda.png') }}" alt="Beranda">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/beranda.png') }}" data-caption="Landing Page">
+          <img src="{{ asset('images/erpsekolah/beranda.png') }}" alt="Beranda">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           <div class="screenshot-caption">Landing Page</div>
         </div>
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/login.png') }}" data-caption="Halaman Login">
-          <img src="{{ asset('images/klinik/login.png') }}" alt="Login">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/login.png') }}" data-caption="Halaman Login">
+          <img src="{{ asset('images/erpsekolah/login.png') }}" alt="Login">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           <div class="screenshot-caption">Halaman Login</div>
         </div>
-      </div>
-    </div>
-
-    <!-- Pasien & Pendaftaran -->
-    <div class="tab-panel" data-panel="pasien">
-      <div class="screenshots-grid">
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/pasien.png') }}" data-caption="Daftar Pasien">
-          <img src="{{ asset('images/klinik/pasien.png') }}" alt="Pasien">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/ppdb-daftar.png') }}" data-caption="Formulir PPDB Online">
+          <img src="{{ asset('images/erpsekolah/ppdb-daftar.png') }}" alt="Formulir PPDB">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
-          <div class="screenshot-caption">Daftar Pasien</div>
+          <div class="screenshot-caption">Formulir PPDB Online</div>
         </div>
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/pasien-detail.png') }}" data-caption="Detail Pasien">
-          <img src="{{ asset('images/klinik/pasien-detail.png') }}" alt="Pasien Detail">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/pengumuman.png') }}" data-caption="Pengumuman Publik">
+          <img src="{{ asset('images/erpsekolah/pengumuman.png') }}" alt="Pengumuman">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
-          <div class="screenshot-caption">Detail Pasien</div>
+          <div class="screenshot-caption">Pengumuman Publik</div>
         </div>
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/pendaftaran.png') }}" data-caption="Antrian Pendaftaran">
-          <img src="{{ asset('images/klinik/pendaftaran.png') }}" alt="Pendaftaran">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/ppdb-admin.png') }}" data-caption="Kelola Pendaftar PPDB">
+          <img src="{{ asset('images/erpsekolah/ppdb-admin.png') }}" alt="PPDB Admin">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
-          <div class="screenshot-caption">Antrian Pendaftaran</div>
-        </div>
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/pendaftaran-detail.png') }}" data-caption="Detail Kunjungan">
-          <img src="{{ asset('images/klinik/pendaftaran-detail.png') }}" alt="Pendaftaran Detail">
-          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
-          <div class="screenshot-caption">Detail Kunjungan</div>
+          <div class="screenshot-caption">Kelola Pendaftar PPDB</div>
         </div>
       </div>
     </div>
 
-    <!-- Rekam Medis -->
-    <div class="tab-panel" data-panel="medis">
+    <!-- Kesiswaan & Akademik -->
+    <div class="tab-panel" data-panel="kesiswaan">
       <div class="screenshots-grid">
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/rekam-medis.png') }}" data-caption="Daftar Rekam Medis">
-          <img src="{{ asset('images/klinik/rekam-medis.png') }}" alt="Rekam Medis">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/dashboard-admin.png') }}" data-caption="Dashboard Admin">
+          <img src="{{ asset('images/erpsekolah/dashboard-admin.png') }}" alt="Dashboard Admin">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
-          <div class="screenshot-caption">Daftar Rekam Medis</div>
+          <div class="screenshot-caption">Dashboard Admin</div>
         </div>
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/rekam-medis-detail.png') }}" data-caption="Detail Rekam Medis — Diagnosis, Vital Signs, Resep">
-          <img src="{{ asset('images/klinik/rekam-medis-detail.png') }}" alt="Rekam Medis Detail">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/data-siswa.png') }}" data-caption="Master Data Siswa">
+          <img src="{{ asset('images/erpsekolah/data-siswa.png') }}" alt="Data Siswa">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
-          <div class="screenshot-caption">Detail EMR — Diagnosis &amp; Vital Signs</div>
+          <div class="screenshot-caption">Master Data Siswa</div>
+        </div>
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/data-guru.png') }}" data-caption="Data Guru & Staf">
+          <img src="{{ asset('images/erpsekolah/data-guru.png') }}" alt="Data Guru">
+          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          <div class="screenshot-caption">Data Guru & Staf</div>
+        </div>
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/data-kelas.png') }}" data-caption="Kelola Kelas">
+          <img src="{{ asset('images/erpsekolah/data-kelas.png') }}" alt="Data Kelas">
+          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          <div class="screenshot-caption">Kelola Kelas</div>
+        </div>
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/tahun-ajaran.png') }}" data-caption="Tahun Ajaran">
+          <img src="{{ asset('images/erpsekolah/tahun-ajaran.png') }}" alt="Tahun Ajaran">
+          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          <div class="screenshot-caption">Tahun Ajaran</div>
+        </div>
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/approval-kenaikan.png') }}" data-caption="Approval Kenaikan Kelas">
+          <img src="{{ asset('images/erpsekolah/approval-kenaikan.png') }}" alt="Approval Kenaikan Kelas">
+          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          <div class="screenshot-caption">Approval Kenaikan Kelas</div>
         </div>
       </div>
     </div>
 
-    <!-- Farmasi & Lab -->
-    <div class="tab-panel" data-panel="penunjang">
+    <!-- Penjadwalan -->
+    <div class="tab-panel" data-panel="jadwal">
       <div class="screenshots-grid">
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/farmasi.png') }}" data-caption="Farmasi — Antrian Resep">
-          <img src="{{ asset('images/klinik/farmasi.png') }}" alt="Farmasi">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/mata-pelajaran.png') }}" data-caption="Master Mata Pelajaran">
+          <img src="{{ asset('images/erpsekolah/mata-pelajaran.png') }}" alt="Mata Pelajaran">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
-          <div class="screenshot-caption">Farmasi — Antrian Resep</div>
+          <div class="screenshot-caption">Master Mata Pelajaran</div>
         </div>
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/laboratorium.png') }}" data-caption="Laboratorium — Daftar Pemeriksaan">
-          <img src="{{ asset('images/klinik/laboratorium.png') }}" alt="Laboratorium">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/pengampu-mapel.png') }}" data-caption="Penugasan Guru per Mapel">
+          <img src="{{ asset('images/erpsekolah/pengampu-mapel.png') }}" alt="Penugasan Guru">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
-          <div class="screenshot-caption">Laboratorium — Daftar Pemeriksaan</div>
+          <div class="screenshot-caption">Penugasan Guru per Mapel</div>
+        </div>
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/jadwal-admin.png') }}" data-caption="Susun Jadwal Mingguan">
+          <img src="{{ asset('images/erpsekolah/jadwal-admin.png') }}" alt="Jadwal Admin">
+          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          <div class="screenshot-caption">Susun Jadwal Mingguan</div>
+        </div>
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/jadwal-guru.png') }}" data-caption="Jadwal Mengajar Guru">
+          <img src="{{ asset('images/erpsekolah/jadwal-guru.png') }}" alt="Jadwal Guru">
+          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          <div class="screenshot-caption">Jadwal Mengajar Guru</div>
+        </div>
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/jadwal-siswa.png') }}" data-caption="Jadwal Kelas — Tampilan Siswa">
+          <img src="{{ asset('images/erpsekolah/jadwal-siswa.png') }}" alt="Jadwal Siswa">
+          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          <div class="screenshot-caption">Jadwal Kelas — Tampilan Siswa</div>
         </div>
       </div>
     </div>
 
-    <!-- Kasir & SDM -->
-    <div class="tab-panel" data-panel="admin">
+    <!-- Presensi -->
+    <div class="tab-panel" data-panel="presensi">
       <div class="screenshots-grid">
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/kasir.png') }}" data-caption="Kasir — Tagihan Pasien">
-          <img src="{{ asset('images/klinik/kasir.png') }}" alt="Kasir">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/presensi-guru.png') }}" data-caption="Input Presensi — Guru">
+          <img src="{{ asset('images/erpsekolah/presensi-guru.png') }}" alt="Presensi Guru">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
-          <div class="screenshot-caption">Kasir — Tagihan Pasien</div>
+          <div class="screenshot-caption">Input Presensi — Guru</div>
         </div>
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/jadwal-dokter.png') }}" data-caption="Jadwal Dokter">
-          <img src="{{ asset('images/klinik/jadwal-dokter.png') }}" alt="Jadwal Dokter">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/rekap-presensi-admin.png') }}" data-caption="Rekap Presensi — Admin">
+          <img src="{{ asset('images/erpsekolah/rekap-presensi-admin.png') }}" alt="Rekap Presensi Admin">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
-          <div class="screenshot-caption">Jadwal Dokter</div>
+          <div class="screenshot-caption">Rekap Presensi — Admin</div>
         </div>
-        <div class="screenshot-item" data-src="{{ asset('images/klinik/sdm.png') }}" data-caption="Manajemen SDM">
-          <img src="{{ asset('images/klinik/sdm.png') }}" alt="SDM">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/presensi-siswa.png') }}" data-caption="Rekap Presensi — Siswa">
+          <img src="{{ asset('images/erpsekolah/presensi-siswa.png') }}" alt="Presensi Siswa">
           <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
-          <div class="screenshot-caption">Manajemen SDM</div>
+          <div class="screenshot-caption">Rekap Presensi — Siswa</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nilai & Rapor -->
+    <div class="tab-panel" data-panel="nilai">
+      <div class="screenshots-grid">
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/nilai-guru.png') }}" data-caption="Input Nilai & Nilai Akhir Otomatis">
+          <img src="{{ asset('images/erpsekolah/nilai-guru.png') }}" alt="Input Nilai">
+          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          <div class="screenshot-caption">Input Nilai & Nilai Akhir Otomatis</div>
+        </div>
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/rapor-wali-kelas.png') }}" data-caption="Rapor — Catatan Wali Kelas">
+          <img src="{{ asset('images/erpsekolah/rapor-wali-kelas.png') }}" alt="Rapor Wali Kelas">
+          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          <div class="screenshot-caption">Rapor — Catatan Wali Kelas</div>
+        </div>
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/rapor-siswa.png') }}" data-caption="Rapor Digital — Tampilan Siswa">
+          <img src="{{ asset('images/erpsekolah/rapor-siswa.png') }}" alt="Rapor Siswa">
+          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          <div class="screenshot-caption">Rapor Digital — Tampilan Siswa</div>
+        </div>
+        <div class="screenshot-item" data-src="{{ asset('images/erpsekolah/dashboard-siswa.png') }}" data-caption="Dashboard Siswa">
+          <img src="{{ asset('images/erpsekolah/dashboard-siswa.png') }}" alt="Dashboard Siswa">
+          <div class="screenshot-overlay"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+          <div class="screenshot-caption">Dashboard Siswa</div>
         </div>
       </div>
     </div>
@@ -435,42 +484,42 @@
       <div class="feature-list">
 
         <div class="feature-item">
+          <div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <div>
+            <div class="feature-text-title">PPDB Online</div>
+            <div class="feature-text-desc">Pendaftaran siswa baru lewat formulir publik, verifikasi bertahap oleh panitia, sampai otomatis jadi akun siswa begitu diterima.</div>
+          </div>
+        </div>
+
+        <div class="feature-item">
           <div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
           <div>
-            <div class="feature-text-title">Manajemen Pasien & Pendaftaran</div>
-            <div class="feature-text-desc">Registrasi pasien baru, pencarian No. RM / NIK, antrian otomatis, dan histori kunjungan lengkap per pasien.</div>
+            <div class="feature-text-title">Data Siswa, Guru & Kelas</div>
+            <div class="feature-text-desc">Master data terpusat: siswa aktif, guru & mata pelajaran yang diampu, kelas per tahun ajaran, lengkap dengan penempatan &amp; kenaikan kelas.</div>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div>
+            <div class="feature-text-title">Penjadwalan Otomatis</div>
+            <div class="feature-text-desc">Susun jadwal mingguan per kelas dengan validasi bentrok otomatis — guru atau kelas tidak bisa terjadwal dobel di jam yang sama.</div>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <div>
+            <div class="feature-text-title">Presensi Digital</div>
+            <div class="feature-text-desc">Guru input presensi per jam pelajaran, otomatis tervalidasi sesuai jadwal & tanggal. Rekap real-time untuk siswa, wali kelas, hingga admin.</div>
           </div>
         </div>
 
         <div class="feature-item">
           <div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
           <div>
-            <div class="feature-text-title">Rekam Medis Elektronik (EMR)</div>
-            <div class="feature-text-desc">Catatan vital signs, anamnesis, diagnosis ICD-10, tindakan, dan resep digital terstruktur dan aman.</div>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
-          <div>
-            <div class="feature-text-title">Laboratorium — Standar LOINC</div>
-            <div class="feature-text-desc">Permintaan dan entry hasil pemeriksaan lab dengan flag H/L otomatis, menggunakan kode standar LOINC.</div>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
-          <div>
-            <div class="feature-text-title">Farmasi & Manajemen Stok Obat</div>
-            <div class="feature-text-desc">Penyerahan resep digital, monitoring stok real-time, dan riwayat dispensing per pasien.</div>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg></div>
-          <div>
-            <div class="feature-text-title">Kasir & Tagihan Otomatis</div>
-            <div class="feature-text-desc">Kalkulasi tagihan dari semua layanan secara otomatis, kwitansi digital, dan rekap laporan kas.</div>
+            <div class="feature-text-title">Nilai & Rapor Digital</div>
+            <div class="feature-text-desc">Input nilai per jenis penilaian (tugas, ulangan, UTS, UAS) dengan bobot, kalkulasi nilai akhir otomatis, dan rapor siap unduh dalam format PDF.</div>
           </div>
         </div>
 
@@ -478,7 +527,7 @@
           <div class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
           <div>
             <div class="feature-text-title">Multi Role & Hak Akses</div>
-            <div class="feature-text-desc">Admin, Dokter, Perawat, Apoteker, Analis Lab, Radiografer, dan Kasir masing-masing dengan akses terpisah.</div>
+            <div class="feature-text-desc">Admin, Kepala Sekolah, TU, Guru/Wali Kelas, dan Siswa masing-masing punya tampilan & akses sesuai perannya.</div>
           </div>
         </div>
 
@@ -493,16 +542,16 @@
         <div class="pricing-card featured">
           <div class="pricing-badge">Paket</div>
           <div class="pricing-name">Professional</div>
-          <div class="pricing-price">Rp 25 jt</div>
+          <div class="pricing-price">Rp 15 jt</div>
           <div class="pricing-period">sekali bayar</div>
           <ul class="pricing-items">
-            <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Pasien & Pendaftaran</li>
-            <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rekam Medis Elektronik</li>
-            <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Farmasi & Kasir</li>
+             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>PPDB Online</li>
+            <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Data Siswa, Guru & Kelas</li>
+            <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Penjadwalan & Presensi</li>
             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Instalasi On-premise / VPS</li>
             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Support Teknis</li>
-            <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Laboratorium & Radiologi</li>
-            <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Standar LOINC & HL7 FHIR</li>
+            <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Kenaikan Kelas & Approval</li>
+            <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Nilai, Rapor & Export PDF</li>
             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Online VPS 1 tahun</li>
             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Support Teknis</li>
           </ul>
@@ -516,7 +565,7 @@
   <!-- CTA -->
   <div class="cta-box">
     <div class="cta-title">Tertarik menggunakan aplikasi ini?</div>
-    <div class="cta-desc">Hubungi kami untuk konsultasi gratis dan demo langsung sesuai kebutuhan klinik atau rumah sakit Anda.</div>
+    <div class="cta-desc">Hubungi kami untuk konsultasi gratis dan demo langsung sesuai kebutuhan sekolah Anda.</div>
     <a href="mailto:halloooyala@gmail.com" class="btn-primary" style="margin:0 auto; width:fit-content;">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
       Hubungi Kami

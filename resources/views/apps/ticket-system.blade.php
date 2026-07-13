@@ -438,9 +438,10 @@
       <p class="section-label">Harga</p>
       <div class="pricing-grid">
 
-        <div class="pricing-card">
-          <div class="pricing-name">Starter</div>
-          <div class="pricing-price">Rp 7,5 jt</div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Paket</div>
+          <div class="pricing-name">Professional</div>
+          <div class="pricing-price">Rp 10 jt</div>
           <div class="pricing-period">sekali bayar</div>
           <ul class="pricing-items">
             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Manajemen tiket</li>
@@ -448,17 +449,6 @@
             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Knowledge base</li>
             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Instalasi (On-premise / VPS)</li>
             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>3 bulan support</li>
-          </ul>
-        </div>
-
-        <div class="pricing-card featured">
-          <div class="pricing-badge">Populer</div>
-          <div class="pricing-name">Professional</div>
-          <div class="pricing-price">Rp 10 jt</div>
-          <div class="pricing-period">sekali bayar</div>
-          <ul class="pricing-items">
-            <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Semua fitur Starter</li>
-
             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>AI article suggestion(*)</li>
             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>VPS 1 tahun</li>
             <li class="pricing-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>6 bulan support</li>

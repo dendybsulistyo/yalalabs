@@ -13,3 +13,7 @@ Route::get('/apps/ticket-system', function () {
 Route::get('/apps/klinik-system', function () {
     return view('apps.klinik-system');
 })->name('klinik-system');
+
+Route::get('/apps/erpsekolah-system', function () {
+    return view('apps.erpsekolah-system');
+})->name('erpsekolah-system');

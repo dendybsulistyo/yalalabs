@@ -473,6 +473,22 @@
         </a>
       </div>
 
+      <!-- Baris 3 -->
+      <div class="screenshot-placeholder">
+        <img src="{{ asset('images/erpsekolah/beranda.png') }}" alt="Sistem Informasi Sekolah">
+      </div>
+      <div class="exp-item">
+        <div class="exp-role">Sistem Informasi Sekolah</div>
+        <div class="exp-company">Web Based</div>
+        <p class="exp-desc">Mengelola PPDB, data siswa & guru, penjadwalan, presensi, hingga nilai dan rapor digital dalam satu platform terpadu.</p>
+        <a href="{{ route('erpsekolah-system') }}" class="btn-detail">
+          Detail
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
     </div>
 
     <footer class="footer">© 2026 Yala Labs</footer>

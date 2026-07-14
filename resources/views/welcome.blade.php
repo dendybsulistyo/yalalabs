@@ -84,6 +84,10 @@
     align-items: flex-start;
   }
 
+  @media (min-width: 1024px) {
+    .sidebar-inner { max-width: 320px; }
+  }
+
   /* ── Avatar ───────────────────────────────────── */
   .avatar {
     width: 140px;
@@ -106,27 +110,35 @@
     .avatar { width: 112px; height: 112px; }
   }
 
-  /* ── Name / Title / Bio ───────────────────────── */
+  /* ── Brand / Headline / Sub-headline ──────────── */
   .name {
-    font-size: 28px;
+    font-size: 13px;
     font-weight: 700;
-    color: var(--black);
-    letter-spacing: -0.01em;
-    margin-bottom: 4px;
+    font-family: var(--mono);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-bottom: 10px;
   }
 
   .job-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--muted);
-    margin-bottom: 16px;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: 1024px) {
+    .job-title { font-size: 23px; }
   }
 
   .bio {
-    font-size: 15px;
+    font-size: 14.5px;
     color: var(--muted);
-    line-height: 1.8;
-    margin-bottom: 28px;
+    line-height: 1.75;
+    margin-bottom: 24px;
   }
 
   /* ── Contact ──────────────────────────────────── */
@@ -175,6 +187,7 @@
 
   /* ── CTA Button ───────────────────────────────── */
   .btn-contact {
+    display: block;
     width: 100%;
     padding: 13px 28px;
     background: var(--black);
@@ -184,9 +197,12 @@
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
     border: none;
     border-radius: 3px;
+    margin-bottom: 28px;
     transition: opacity 0.18s;
   }
 
@@ -215,6 +231,13 @@
 
   /* ── Section ──────────────────────────────────── */
   .section { margin-bottom: 52px; }
+
+  .section-intro {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
 
   .section-heading {
     font-size: 10px;
@@ -461,38 +484,18 @@
   <main class="main">
   <div class="main-inner">
 
-    <!-- Skills -->
+    <!-- Produk -->
     <section class="section">
-      <div class="skills-grid">
-        <div class="skill-group full">
-          <div class="skill-group-label">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="7" height="7" rx="1"/>
-              <rect x="14" y="3" width="7" height="7" rx="1"/>
-              <rect x="3" y="14" width="7" height="7" rx="1"/>
-              <rect x="14" y="14" width="7" height="7" rx="1"/>
-            </svg>
-            Teknologi yang digunakan
-          </div>
-          <div class="tag-list" style="margin-top:12px;">
-            <span class="tag">Laravel</span>
-            <span class="tag">Cloudflare</span>
-            <span class="tag">Linux</span>
-          </div>
-        </div>
+      <div class="skill-group-label" style="margin-bottom:8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7" rx="1"/>
+          <rect x="14" y="3" width="7" height="7" rx="1"/>
+          <rect x="3" y="14" width="7" height="7" rx="1"/>
+          <rect x="14" y="14" width="7" height="7" rx="1"/>
+        </svg>
+        Produk Kami
       </div>
-    </section>
-    
-
-    <div class="skill-group-label" style="margin-bottom:20px;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="3" width="7" height="7" rx="1"/>
-        <rect x="14" y="3" width="7" height="7" rx="1"/>
-        <rect x="3" y="14" width="7" height="7" rx="1"/>
-        <rect x="14" y="14" width="7" height="7" rx="1"/>
-      </svg>
-      Produk Kami
-    </div>
+      <p class="section-intro">Berikut solusi yang sudah kami kembangkan untuk sekolah, klinik, dan instansi seperti Anda:</p>
 
     <div class="split-grid">
 
@@ -548,6 +551,29 @@
       </div>
 
     </div>
+    </section>
+
+    <!-- Teknologi -->
+    <section class="section">
+      <div class="skills-grid">
+        <div class="skill-group full">
+          <div class="skill-group-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+            Teknologi yang digunakan
+          </div>
+          <div class="tag-list" style="margin-top:12px;">
+            <span class="tag">Laravel</span>
+            <span class="tag">Cloudflare</span>
+            <span class="tag">Linux</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">© 2026 Yala Labs</footer>
 
@@ -562,9 +588,11 @@
         <img src={{ asset('images/yala.png') }}>
       </div>
 
-      <h1 class="name">Yala Labs</h1>
-      <p class="job-title">Web App / Laravel Developer</p>
-      <p class="bio">lets connect and solve the problems</p>
+      <p class="name">Yala Labs</p>
+      <h1 class="job-title">Sistem Informasi berbasis Web untuk Sekolah, Klinik, Instansi dan Usaha Anda</h1>
+      <p class="bio">Kami membangun aplikasi web siap pakai sesuai kebutuhan usaha Anda</p>
+
+      <a href="{{ route('contact') }}" class="btn-contact">Konsultasi Gratis</a>
 
       <ul class="contact-list">
         <li class="contact-item">

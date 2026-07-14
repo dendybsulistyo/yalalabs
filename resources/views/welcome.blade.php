@@ -393,6 +393,48 @@
     color: var(--faint);
     padding-top: 20px;
   }
+
+
+  /* ── WhatsApp CTA ─────────────────────────────── */
+  .whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 20px;
+    background: #25D366;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.28);
+    transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+  }
+
+  .whatsapp-btn:hover {
+    background: #20bd5a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.38);
+  }
+
+  .whatsapp-btn svg { flex-shrink: 0; }
+
+  /* ── Support note ─────────────────────────────── */
+  .support-note {
+    width: 100%;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--faint);
+    letter-spacing: 0.02em;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--tag-bg);
+  }
+
 </style>
 </head>
 <body>
@@ -523,6 +565,7 @@
           </svg>
           halloooyala@gmail.com
         </li>
+  
         <li class="contact-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
@@ -530,10 +573,16 @@
           </svg>
          Yogyakarta, Indonesia
         </li>
-         <b>support by : CV. Andita Yogyakarta</b>
       </ul>
 
-      
+      <a href="https://wa.me/6283896247627" target="_blank" class="whatsapp-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.8 14.09c-.24.68-1.4 1.32-1.94 1.4-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.54-1.16-2.94s.73-2.09 1-2.37c.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.17.01.38-.06.6.45.24.56.8 1.96.87 2.1.07.14.11.31.02.5-.09.19-.14.31-.27.47-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.61-.07.16-.19.68-.79.87-1.06.18-.27.37-.22.62-.13.25.09 1.6.75 1.87.89.27.14.46.2.52.32.07.12.07.68-.17 1.36z"/>
+        </svg>
+        WhatsApp
+      </a>
+
+      <p class="support-note">support by CV. Andita Yogyakarta</p>
     </div>
   </aside>
 

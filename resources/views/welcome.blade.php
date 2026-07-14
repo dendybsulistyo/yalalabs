@@ -406,7 +406,6 @@
     <!-- Skills -->
     <section class="section">
       <div class="skills-grid">
-
         <div class="skill-group full">
           <div class="skill-group-label">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -415,19 +414,17 @@
               <rect x="3" y="14" width="7" height="7" rx="1"/>
               <rect x="14" y="14" width="7" height="7" rx="1"/>
             </svg>
-            We use the following technologies
+            Teknologi yang digunakan
           </div>
           <div class="tag-list" style="margin-top:12px;">
             <span class="tag">Laravel</span>
-            <span class="tag">MySQL</span>
             <span class="tag">Cloudflare</span>
             <span class="tag">Linux</span>
           </div>
         </div>
-
-
       </div>
     </section>
+    
 
     <div class="skill-group-label" style="margin-bottom:20px;">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -436,7 +433,7 @@
         <rect x="3" y="14" width="7" height="7" rx="1"/>
         <rect x="14" y="14" width="7" height="7" rx="1"/>
       </svg>
-      Our Products
+      Produk Kami
     </div>
 
     <div class="split-grid">
@@ -505,7 +502,7 @@
       </div>
 
       <h1 class="name">Yala Labs</h1>
-      <p class="job-title">Web Application Developer</p>
+      <p class="job-title">Web App / Laravel Developer</p>
       <p class="bio">lets connect and solve the problems</p>
 
       <ul class="contact-list">

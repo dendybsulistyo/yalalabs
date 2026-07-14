@@ -347,16 +347,31 @@
 
   /* ── Split Grid (Experience) ─────────────────── */
   .split-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .product-card {
     display: grid;
     grid-template-columns: 40fr 60fr;
     column-gap: 28px;
-    row-gap: 40px;
-    align-items: start;
+    align-items: center;
+    background: var(--white);
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(17, 17, 17, 0.06), 0 8px 24px rgba(17, 17, 17, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(17, 17, 17, 0.08), 0 16px 32px rgba(17, 17, 17, 0.08);
   }
 
   .screenshot-placeholder {
     background: var(--card-bg);
-    border-radius: 10px;
+    border-radius: 4px;
     min-height: 150px;
     display: flex;
     flex-direction: column;
@@ -367,6 +382,7 @@
     font-size: 11px;
     letter-spacing: 0.06em;
     overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.06);
   }
 
   .screenshot-placeholder img {
@@ -374,7 +390,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 10px;
+    border-radius: 4px;
   }
 
   @media (max-width: 1023px) {
@@ -382,7 +398,7 @@
   }
 
   @media (max-width: 767px) {
-    .split-grid { grid-template-columns: 1fr; }
+    .product-card { grid-template-columns: 1fr; }
   }
 
   /* ── Footer ───────────────────────────────────── */
@@ -480,52 +496,55 @@
 
     <div class="split-grid">
 
-      <!-- Baris 1 -->
-      <div class="screenshot-placeholder">
-        <img src="{{ asset('images/portalticket.png') }}" alt="App Screenshot">
-      </div>
-      <div class="exp-item">
-        <div class="exp-role">Knowledge Base & Ticket System</div>
-        <div class="exp-company">Web Based</div>
-        <p class="exp-desc">Mengelola keluhan User dan permasalahan Layanan di instansi / unit kerja Anda secara efisien.</p>
-        <a href="{{ route('ticket-system') }}" class="btn-detail">
-          Detail
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Baris 2 -->
-      <div class="screenshot-placeholder">
-        <img src="{{ asset('images/klinik/beranda.png') }}" alt="Sistem Informasi Klinik">
-      </div>
-      <div class="exp-item">
-        <div class="exp-role">Sistem Informasi Klinik</div>
-        <div class="exp-company">Web Based</div>
-        <p class="exp-desc">Mengelola Rumah Sakit dan Klinik dengan menggunakan standart HL7 FHIR, ICD10, LOINC dan lain lain</p>
-        <a href="{{ route('klinik-system') }}" class="btn-detail">
-          Detail
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+      <div class="product-card">
+        <div class="screenshot-placeholder">
+          <img src="{{ asset('images/portalticket.png') }}" alt="App Screenshot">
+        </div>
+        <div class="exp-item">
+          <div class="exp-role">Knowledge Base & Ticket System</div>
+          <div class="exp-company">Web Based</div>
+          <p class="exp-desc">Mengelola keluhan User dan permasalahan Layanan di instansi / unit kerja Anda secara efisien.</p>
+          <a href="{{ route('ticket-system') }}" class="btn-detail">
+            Detail
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
       </div>
 
-      <!-- Baris 3 -->
-      <div class="screenshot-placeholder">
-        <img src="{{ asset('images/erpsekolah/beranda.png') }}" alt="Sistem Informasi Sekolah">
+      <div class="product-card">
+        <div class="screenshot-placeholder">
+          <img src="{{ asset('images/klinik/beranda.png') }}" alt="Sistem Informasi Klinik">
+        </div>
+        <div class="exp-item">
+          <div class="exp-role">Sistem Informasi Klinik</div>
+          <div class="exp-company">Web Based</div>
+          <p class="exp-desc">Mengelola Rumah Sakit dan Klinik dengan menggunakan standart HL7 FHIR, ICD10, LOINC dan lain lain</p>
+          <a href="{{ route('klinik-system') }}" class="btn-detail">
+            Detail
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="exp-item">
-        <div class="exp-role">Sistem Informasi Sekolah</div>
-        <div class="exp-company">Web Based</div>
-        <p class="exp-desc">Mengelola PPDB, data siswa & guru, penjadwalan, presensi, hingga nilai dan rapor digital dalam satu platform terpadu.</p>
-        <a href="{{ route('erpsekolah-system') }}" class="btn-detail">
-          Detail
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+
+      <div class="product-card">
+        <div class="screenshot-placeholder">
+          <img src="{{ asset('images/erpsekolah/beranda.png') }}" alt="Sistem Informasi Sekolah">
+        </div>
+        <div class="exp-item">
+          <div class="exp-role">Sistem Informasi Sekolah</div>
+          <div class="exp-company">Web Based</div>
+          <p class="exp-desc">Mengelola PPDB, data siswa & guru, penjadwalan, presensi, hingga nilai dan rapor digital dalam satu platform terpadu.</p>
+          <a href="{{ route('erpsekolah-system') }}" class="btn-detail">
+            Detail
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
       </div>
 
     </div>

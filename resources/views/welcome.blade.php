@@ -495,7 +495,7 @@
         </svg>
         Produk Kami
       </div>
-      <p class="section-intro">Berikut solusi yang sudah kami kembangkan untuk sekolah, klinik, dan instansi seperti Anda:</p>
+      <p class="section-intro">Berikut solusi yang sudah kami kembangkan untuk sekolah, klinik, dan instansi / usaha Anda:</p>
 
     <div class="split-grid">
 

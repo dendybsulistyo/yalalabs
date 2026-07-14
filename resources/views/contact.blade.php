@@ -129,6 +129,59 @@
   .footer { margin-top: 64px; font-family: var(--mono); font-size: 10px; letter-spacing: .06em; color: var(--faint); }
 
   @media (max-width: 767px) { .hero-title { font-size: 26px; } .cta-box { padding: 36px 24px; } }
+
+  /* ── Form ─────────────────────────────────────── */
+  .form-status {
+    background: #e8faf0; color: #1a7a42; border-radius: 8px;
+    padding: 14px 18px; font-size: 13.5px; margin-bottom: 24px;
+  }
+
+  .contact-form {
+    background: var(--white); border-radius: 12px; padding: 28px;
+    box-shadow: 0 1px 3px rgba(17,17,17,.06), 0 8px 24px rgba(17,17,17,.04);
+    margin-bottom: 48px;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 16px; }
+  @media (min-width: 640px) { .form-row.two-col { grid-template-columns: 1fr 1fr; } }
+
+  .form-group label {
+    display: block; font-family: var(--mono); font-size: 10.5px; font-weight: 600;
+    letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; padding: 11px 14px; font-family: var(--sans); font-size: 14px;
+    color: var(--text); background: var(--bg); border: 1px solid var(--tag-bg);
+    border-radius: 6px; transition: border-color .15s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none; border-color: var(--accent);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .form-error { color: #c0392b; font-size: 12px; margin-top: 5px; }
+
+  /* Honeypot: disembunyikan dari manusia, tapi tetap ada di DOM untuk bot */
+  .form-honeypot {
+    position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;
+  }
+
+  .btn-submit {
+    width: 100%; padding: 13px 28px; background: var(--black); color: var(--white);
+    font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: .03em;
+    border: none; border-radius: 6px; cursor: pointer; transition: opacity .18s;
+    margin-top: 8px;
+  }
+  .btn-submit:hover { opacity: .85; }
+
+  .cf-turnstile { margin-bottom: 16px; }
 </style>
 </head>
 <body>
@@ -145,9 +198,78 @@
     Hubungi Kami
   </div>
   <h1 class="hero-title">Mari Diskusikan<br>Kebutuhan Anda</h1>
-  <p class="hero-desc">Konsultasi gratis untuk pembuatan sistem sesuai kebutuhan instansi/perusahaan Anda. Silakan hubungi kami lewat WhatsApp, email, atau kontak di bawah ini.</p>
+  <p class="hero-desc">Konsultasi gratis untuk pembuatan sistem sesuai kebutuhan instansi/perusahaan Anda. Isi form di bawah, atau hubungi kami langsung lewat WhatsApp/email.</p>
 
-  <p class="section-label">Kontak</p>
+  @if (session('status'))
+    <div class="form-status">{{ session('status') }}</div>
+  @endif
+
+  <p class="section-label">Kirim Pesan</p>
+  <form class="contact-form" method="POST" action="{{ route('contact.store') }}">
+    @csrf
+
+    <div class="form-row two-col">
+      <div class="form-group">
+        <label for="name">Nama</label>
+        <input type="text" id="name" name="name" value="{{ old('name') }}" required>
+        @error('name') <p class="form-error">{{ $message }}</p> @enderror
+      </div>
+      <div class="form-group">
+        <label for="institution_name">Nama Instansi</label>
+        <input type="text" id="institution_name" name="institution_name" value="{{ old('institution_name') }}">
+        @error('institution_name') <p class="form-error">{{ $message }}</p> @enderror
+      </div>
+    </div>
+
+    <div class="form-row two-col">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="{{ old('email') }}" required>
+        @error('email') <p class="form-error">{{ $message }}</p> @enderror
+      </div>
+      <div class="form-group">
+        <label for="phone">No. HP/WA</label>
+        <input type="text" id="phone" name="phone" placeholder="08xxxxxxxxxx" value="{{ old('phone') }}" required>
+        @error('phone') <p class="form-error">{{ $message }}</p> @enderror
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="product_interest">Produk yang Diminati</label>
+        <select id="product_interest" name="product_interest" required>
+          <option value="">-- Pilih Produk --</option>
+          <option value="sekolah" @selected(old('product_interest') === 'sekolah')>Sistem Informasi Sekolah</option>
+          <option value="klinik" @selected(old('product_interest') === 'klinik')>Sistem Informasi Klinik</option>
+          <option value="ticket" @selected(old('product_interest') === 'ticket')>Knowledge Base & Ticket System</option>
+          <option value="lainnya" @selected(old('product_interest') === 'lainnya')>Lainnya</option>
+        </select>
+        @error('product_interest') <p class="form-error">{{ $message }}</p> @enderror
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="message">Pesan / Kebutuhan</label>
+        <textarea id="message" name="message" required>{{ old('message') }}</textarea>
+        @error('message') <p class="form-error">{{ $message }}</p> @enderror
+      </div>
+    </div>
+
+    <div class="form-honeypot" aria-hidden="true">
+      <label for="website">Website</label>
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    @if (config('services.turnstile.site_key'))
+      <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.site_key') }}"></div>
+      @error('cf-turnstile-response') <p class="form-error">{{ $message }}</p> @enderror
+    @endif
+
+    <button type="submit" class="btn-submit">Kirim Pesan</button>
+  </form>
+
+  <p class="section-label">Atau Hubungi Langsung</p>
   <div class="contact-grid">
 
     <a href="https://wa.me/6283896247627" target="_blank" class="contact-card whatsapp">
@@ -208,5 +330,9 @@
   <footer class="footer">© 2026 Yala Labs</footer>
 
 </div>
+
+@if (config('services.turnstile.site_key'))
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+@endif
 </body>
 </html>

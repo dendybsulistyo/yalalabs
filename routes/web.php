@@ -27,6 +27,10 @@ Route::get('/apps/erpsekolah-system', function () {
     return view('apps.erpsekolah-system');
 })->name('erpsekolah-system');
 
+Route::get('/apps/klinikgigi-system', function () {
+    return view('apps.klinikgigi-system');
+})->name('klinikgigi-system');
+
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'show'])->name('login');
     Route::post('/login', [LoginController::class, 'login'])

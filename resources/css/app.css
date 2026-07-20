@@ -8,4 +8,58 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Palet & token dari desain.html (landing page baru Yala Labs) */
+    --font-headline: 'Hanken Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-label: 'JetBrains Mono', monospace;
+
+    --color-primary: #bc0003;
+    --color-primary-container: #e71610;
+    --color-on-primary: #ffffff;
+    --color-background: #f8f9fa;
+    --color-on-background: #191c1d;
+    --color-surface: #f8f9fa;
+    --color-on-surface: #191c1d;
+    --color-on-surface-variant: #5e3f3a;
+    --color-surface-container-lowest: #ffffff;
+    --color-surface-container-low: #f3f4f5;
+    --color-surface-container: #edeeef;
+    --color-surface-container-high: #e7e8e9;
+    --color-surface-container-highest: #e1e3e4;
+    --color-secondary: #575e70;
+    --color-secondary-fixed: #dce2f7;
+    --color-tertiary: #535d6b;
+    --color-tertiary-fixed: #d9e3f4;
+    --color-outline: #936e69;
+    --color-outline-variant: #e8bcb6;
+
+    --spacing-container-max: 1280px;
+    --spacing-margin-desktop: 40px;
+    --spacing-margin-mobile: 20px;
+    --spacing-gutter: 24px;
+    --spacing-section-gap: 96px;
+}
+
+.glass-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.text-gradient-red {
+    background: linear-gradient(135deg, #bc0003 0%, #e71610 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hover-lift {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(188, 0, 3, 0.08);
+}
+.soft-bloom {
+    box-shadow: 0 10px 30px -10px rgba(188, 0, 3, 0.05), 0 4px 10px -5px rgba(0, 0, 0, 0.03);
+}
+.browser-frame {
+    box-shadow: 0 20px 60px -20px rgba(17, 17, 17, 0.25), 0 4px 12px -4px rgba(17, 17, 17, 0.08);
 }

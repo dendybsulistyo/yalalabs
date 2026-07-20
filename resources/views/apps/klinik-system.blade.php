@@ -268,7 +268,7 @@
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
         Web Application
       </div>
-      <h1 class="hero-title">Sistem Informasi<br>Klinik</h1>
+      <h1 class="hero-title">Sistem Informasi<br>Klinik / Rekam Medis</h1>
       <p class="hero-desc">Platform terpadu untuk mengelola seluruh operasional klinik — dari pendaftaran pasien, rekam medis elektronik, farmasi, laboratorium, radiologi, hingga kasir dan laporan. Dibangun dengan standar ICD-10, LOINC, dan HL7 FHIR.</p>
       <div class="tag-list">
         <span class="tag teal">ICD-10</span>

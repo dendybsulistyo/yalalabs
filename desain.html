@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yala Labs | The Clean Stack for Innovation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Hanken+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#191c1d",
+                        "on-primary-container": "#fffbff",
+                        "background": "#f8f9fa",
+                        "on-background": "#191c1d",
+                        "surface-container": "#edeeef",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#e8bcb6",
+                        "tertiary-fixed": "#d9e3f4",
+                        "tertiary": "#535d6b",
+                        "inverse-primary": "#ffb4a8",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#e71610",
+                        "on-primary-fixed-variant": "#930001",
+                        "on-tertiary-container": "#fdfcff",
+                        "inverse-surface": "#2e3132",
+                        "secondary-container": "#d9dff5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#410000",
+                        "secondary": "#575e70",
+                        "tertiary-fixed-dim": "#bdc7d8",
+                        "surface-dim": "#d9dadb",
+                        "primary": "#bc0003",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-tint": "#c00003",
+                        "outline": "#936e69",
+                        "on-secondary-container": "#5c6274",
+                        "secondary-fixed-dim": "#c0c6db",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary-fixed-variant": "#404758",
+                        "tertiary-container": "#6b7584",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#5e3f3a",
+                        "secondary-fixed": "#dce2f7",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-variant": "#e1e3e4",
+                        "on-tertiary-fixed-variant": "#3e4755",
+                        "primary-fixed": "#ffdad5",
+                        "surface-bright": "#f8f9fa",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#141b2b",
+                        "on-tertiary-fixed": "#121c28"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "base": "4px",
+                        "section-gap": "96px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.5", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-md": ["30px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-gradient-red {
+            background: linear-gradient(135deg, #bc0003 0%, #e71610 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .soft-bloom {
+            box-shadow: 0 10px 30px -10px rgba(188, 0, 3, 0.05), 0 4px 10px -5px rgba(0, 0, 0, 0.03);
+        }
+        .code-block {
+            background: #111827;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .hover-lift {
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(188, 0, 3, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary/20 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="w-full sticky top-0 z-50 bg-surface/80 glass-nav border-b border-surface-container-highest shadow-sm h-20 flex items-center">
+<div class="max-w-container-max mx-auto px-margin-desktop flex items-center justify-between w-full">
+<div class="flex items-center gap-12">
+<a class="font-headline-md text-headline-md font-bold text-primary tracking-tight" href="#">Yala Labs</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Solutions</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Research</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Ecosystem</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Docs</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Company</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="hidden lg:flex items-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined mr-2">search</span>
+<span class="font-body-md">Search</span>
+</button>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-body-md font-semibold hover:opacity-90 transition-all duration-200 active:scale-95" href="#">Start Project</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-24 pb-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop grid lg:grid-cols-2 gap-16 items-center relative z-10">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-primary font-label-sm text-label-sm mb-8">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    NOW IN BETA: QUANTUM PIPELINES
+                </div>
+<h1 class="font-display-lg text-display-lg mb-6 leading-[1.1]">The clean stack for <span class="text-gradient-red">innovation.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    Yala Labs builds high-performance digital solutions that empower artisans and engineers to build, ship, and scale at ridiculous speed. Experience technical precision meets architectural elegance.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-body-md font-semibold shadow-lg hover:opacity-90 transition-all active:scale-95 flex items-center justify-center group">
+                        Deploy on Cloud
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="bg-surface-container-lowest border border-surface-container-highest text-on-surface px-8 py-4 rounded-lg font-body-md font-semibold hover:bg-surface-container-low transition-all active:scale-95 flex items-center justify-center">
+                        View framework docs
+                    </button>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="relative rounded-xl overflow-hidden soft-bloom border border-surface-container-highest">
+<div class="w-full aspect-[4/3] bg-cover bg-center" data-alt="A sophisticated 3D isometric representation of a modular digital architecture stack. The visualization uses clean, translucent layers of white and gray, with vibrant red data streams and glowing connection points illustrating high-performance orchestration. The lighting is crisp and studio-quality, emphasizing technical precision and a modern corporate aesthetic consistent with Yala Labs' professional branding." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBA3BZhokNJPpcsEa0NgGvypyZp-cmXw1s4H6Fk0CqNpRaxGTEL5SDeBHUDlKGsnn1Eyklb4DJ4t-W0nkbYjhkZUv5fmkrdUHdG0jS1SgQQUACCQPtV1mxTRAR234sjq4gFHmd3xu2RfDOn7AuBkuvMHccG0YV00_XKwk-qLpFaWPul_yTYGKiKvfDh_JyqcySBxG5N8Z9dJgywR-Efvpm85fylkkhl7jFpivFpvBOo7jLt_97hHmpb')"></div>
+</div>
+<!-- Floating code snippet -->
+<div class="absolute -bottom-8 -left-12 code-block p-6 rounded-xl shadow-2xl border border-white/10 hidden xl:block">
+<div class="flex gap-2 mb-4">
+<div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+</div>
+<code class="text-white/90 text-sm">
+<span class="text-primary">import</span> { Orchestrator } from <span class="text-secondary-fixed">"@yala/labflow"</span>;<br/><br/>
+<span class="text-secondary">const</span> flow = <span class="text-primary">new</span> <span class="text-primary-fixed-dim">Orchestrator</span>({<br/>
+                          engine: <span class="text-secondary-fixed">'quantum'</span>,<br/>
+                          precision: <span class="text-secondary-fixed">'high'</span><br/>
+                        });
+                    </code>
+</div>
+</div>
+</div>
+<!-- Background decorative pattern -->
+<div class="absolute inset-0 -z-10 opacity-[0.03]" style="background-image: radial-gradient(#bc0003 0.5px, transparent 0.5px); background-size: 24px 24px;"></div>
+</header>
+<!-- Trusted By -->
+<section class="py-16 border-y border-surface-container-highest bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-12">Powering ideas for the best &amp; brightest</p>
+<div class="flex flex-wrap justify-center items-center gap-16 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<div class="h-8 w-32 bg-contain bg-no-repeat bg-center" data-alt="Corporate logo of a globally recognized technology leader, rendered in a clean, minimalist vector style for a white background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVjxbhENRo2EdAnkWeSYJ3G1vAL6t6C_r_o73145_QI5sMFquZeaI0aDQMnnv8G_ePr-71Qv7X155FAXe45In_1vXBWHHJHEo6sjpqd_I1SwV_eY57UfhOGWfs0pah3qFc8TxRo-jtU2Pt5z3tsSdM13RRWchvqncG1QyGgGz2p3SrvfR-durrItpg0ju9FvrMabeZrJCcjeHgv61aGTzMtS-B4U7LgQz4LyRXBguXoVHOEF_CL8ah')"></div>
+<div class="h-8 w-32 bg-contain bg-no-repeat bg-center" data-alt="Minimalist emblem of a major financial services provider, styled with high-contrast precision suitable for a premium corporate brand wall." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDIPb1vN-4F9Fr7ep4KafghjxdBm6GkXFXRWals6Jq4FGX-UgO3fjxEldkuyo4ns37EyT0_jlxy-93MPKxMveurdcLAMXsNSRYyrfHnNlhpKluu72_AEG-vMTzX02H4jqZBQHITDKZRP8aMfIP9ZKYbtZAZbCu5pQX6kiZ3HaqMs3x7lsYaofib8gxKQ7g84JQ28P6w4FGmsMHQ-u40Dm7I-P3wmtXCS48nOrNuBYPyhxs8iO43MFJv')"></div>
+<div class="h-8 w-32 bg-contain bg-no-repeat bg-center" data-alt="Monochrome professional logo of a leading cloud infrastructure company, emphasizing stability and technical excellence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGtYWHam28Nb4xfUGrDaYF0REdiXTENbJwDlTEOk2MtJARvRJvChKer4CHvSJJBl1RMIsrO7ysxjZGPwiJVPWSr3q2swptjEw_vHvTH1UKIu2kTXLEI1TMX87n3Emd74V9lWHZYU1gSVGME5xDVwL--yBEX-DfFx_eVBLU9s0xUZGfpkW50dShwgjnQeiJg1ktNY_e3VYmVdSq7PNTipkbuBXH09p54ZuJepl2ak9fVbCz7KSZ65V4')"></div>
+<div class="h-8 w-32 bg-contain bg-no-repeat bg-center" data-alt="Sleek, modern logo representing a breakthrough medical technology research organization, presented with surgical-grade visual clarity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkBH5V-YgZ1_VUkJBb-uiIKN8l15mV7MtmogTZpzn84U0lhTsSG6j0uL0DvWcK6FDTdq_ncUfhAKOUU9Dci4RAP_OpkidVZp59zWdzBm4GQsjFndHYCsoF_yswllK3FPKBvkWkQUAuFrxagXrbJywLJWzoQi8_aIAf0h239D2uO4_nQLMFLqJkOQj6aA6zqkh4BVh1v2FG3_Pb6RRrCjemY0ut9OiG7FB_uJ7eDGxJE3iNWOgUBBLs')"></div>
+<div class="h-8 w-32 bg-contain bg-no-repeat bg-center" data-alt="Modern logo for a pioneer in industrial automation and control systems, focused on geometric balance and technical reliability." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUpPF7jSSx5gTWFRZLTamXUINNIIa0QbhDkW0e0scwy0X5wwXUGCBy10ZdHqM4g6t1NbFZLG9PNHrT1xZPjykE9MtjJ0HWy3PbRhAHX4Jrs-YmdGmfuH5GZf-rgEDhYWslvcUB8PO8vbLfVG7w7C2iI9m2tvBDL4sdh2tXqL4cJ41GdLGi6pSWx28caX1Ataypb8z8bWsymw4xmZZbmDrmISTCEUEjnanJ1gkeS062CVMsQCWm0-Xj')"></div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Engineered for precision.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">From laboratory orchestration to industrial control, our core stack provides the reliability required for mission-critical operations.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<!-- Product 1 -->
+<div class="p-8 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover-lift group">
+<div class="w-12 h-12 rounded-lg bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">science</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">LabFlow Pro</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        State-of-the-art laboratory orchestration system designed for high-throughput environments and automated sample tracking.
+                    </p>
+<a class="inline-flex items-center text-primary font-semibold group-hover:gap-4 transition-all" href="#">
+                        Explore LabFlow
+                        <span class="material-symbols-outlined ml-2 text-sm">arrow_outward</span>
+</a>
+</div>
+<!-- Product 2 -->
+<div class="p-8 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover-lift group">
+<div class="w-12 h-12 rounded-lg bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">SentiGrid</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Advanced data visualization engine that transforms complex multi-dimensional datasets into actionable industrial insights.
+                    </p>
+<a class="inline-flex items-center text-primary font-semibold group-hover:gap-4 transition-all" href="#">
+                        Explore SentiGrid
+                        <span class="material-symbols-outlined ml-2 text-sm">arrow_outward</span>
+</a>
+</div>
+<!-- Product 3 -->
+<div class="p-8 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover-lift group">
+<div class="w-12 h-12 rounded-lg bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">settings_input_component</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Human-Sync</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Real-time industrial control engine providing seamless synchronization between human operators and robotic infrastructure.
+                    </p>
+<a class="inline-flex items-center text-primary font-semibold group-hover:gap-4 transition-all" href="#">
+                        Explore Human-Sync
+                        <span class="material-symbols-outlined ml-2 text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Digital Ecosystem -->
+<section class="py-section-gap bg-surface-container-low border-y border-surface-container-highest">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">The Digital Ecosystem</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Comprehensive solutions extending beyond code, into the heart of knowledge, health, and education.</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<!-- Knowledge Base -->
+<div class="flex gap-6 p-6 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-primary/30 transition-all cursor-pointer">
+<div class="shrink-0 w-14 h-14 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">menu_book</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[24px] mb-2">Knowledge Base</h4>
+<p class="text-on-surface-variant">Centralized documentation and resource management for enterprise-scale engineering teams.</p>
+</div>
+</div>
+<!-- Clinic -->
+<div class="flex gap-6 p-6 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-primary/30 transition-all cursor-pointer">
+<div class="shrink-0 w-14 h-14 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">local_hospital</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[24px] mb-2">Digital Clinic</h4>
+<p class="text-on-surface-variant">Streamlined health services orchestration with zero-latency data synchronization.</p>
+</div>
+</div>
+<!-- School -->
+<div class="flex gap-6 p-6 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-primary/30 transition-all cursor-pointer">
+<div class="shrink-0 w-14 h-14 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">school</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[24px] mb-2">Yala School</h4>
+<p class="text-on-surface-variant">Learning management platform designed for technical education and precision training.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute inset-0 bg-primary/5 blur-3xl rounded-full"></div>
+<div class="relative bg-on-surface rounded-2xl overflow-hidden shadow-2xl p-4">
+<div class="w-full aspect-video bg-cover bg-center rounded-lg" data-alt="A clean, dark-themed dashboard interface showcasing sophisticated data analytics for a digital ecosystem. It features elegant line charts with bright red highlights, glowing circular progress indicators, and monospaced typography for technical metrics. The aesthetic is inspired by high-end IDEs and professional monitoring tools, maintaining a mood of focus, reliability, and technical prowess." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0GzqvL0-eOu7FrY4Ujom1aMReUpXRW7SwDcM-EooDi8YoAcxYBM3uLMvgmwZrrgCo63o9ffbxPrJ2Pia7GLQVbnalavobSoEjUDlfK7RqG8v3fXvPrQvlq74F6i6z0wzAtoOTzenISv7NeHvIYGnuiQiK_J2ys1yj24F-6pJJnJV8XgAWacUQ-Q6z1dkdxMS7Hw-n1eRUUU3MfvbqkGJ9wojgmJxfqDJN_ci54WBPloM3SmxKaEyA')"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center relative z-10">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 leading-[1.1]">Create without limits.<br/>What will you ship?</h2>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-lg font-body-md font-semibold shadow-lg hover:opacity-90 transition-all active:scale-95 flex items-center group">
+                    Deploy on Cloud
+                    <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="bg-surface-container-lowest border border-surface-container-highest text-on-surface px-10 py-5 rounded-lg font-body-md font-semibold hover:bg-surface-container-low transition-all active:scale-95 flex items-center">
+                    Explore framework docs
+                </button>
+</div>
+</div>
+<!-- Decorative SVG mesh -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-full opacity-5 pointer-events-none">
+<svg viewbox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#bc0003" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="1000" width="1000"></rect>
+</svg>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-24 bg-surface-container-lowest border-t border-surface-container-highest">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter">
+<div class="col-span-2 lg:col-span-2 mb-12 lg:mb-0">
+<a class="font-headline-md text-headline-md font-bold text-primary mb-6 block" href="#">Yala Labs</a>
+<p class="text-on-surface-variant font-body-md mb-8 pr-12">
+                    Yala Labs is the most productive way to build, deploy, and monitor modern digital software. High-performance digital innovation for artisans and agents.
+                </p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">terminal</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">code</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">forum</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-body-md font-semibold text-primary mb-6">Solutions</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">LabFlow Pro</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">SentiGrid</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Human-Sync</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Cloud Connect</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-body-md font-semibold text-primary mb-6">Resources</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Documentation</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Starter Kits</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">API Reference</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Open Source</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-body-md font-semibold text-primary mb-6">Ecosystem</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Knowledge Base</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Clinic</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">School</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Partners</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-body-md font-semibold text-primary mb-6">Company</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Careers</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Security</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="#">Privacy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-section-gap pt-8 border-t border-surface-container-highest flex flex-col md:row justify-between items-center gap-4">
+<p class="text-on-surface-variant text-sm font-body-md">
+                © 2024 Yala Labs. High-performance digital innovation.
+            </p>
+<div class="flex gap-8 text-sm">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Status</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Changelog</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Compliance</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for sticky nav
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

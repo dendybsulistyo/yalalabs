@@ -252,7 +252,7 @@
         <div>
             <h5 class="font-semibold text-primary mb-6 text-sm">Produk</h5>
             <ul class="space-y-3 text-sm">
-                <li><a href="{{ route('klinikgigi-system') }}" class="text-on-surface-variant hover:text-primary transition-all">Klinik Gigi</a></li>
+                <li><a href="{{ route('klinikgigi-system') }}" class="text-on-surface-variant hover:text-primary transition-all">Sistem Klinik Gigi</a></li>
                 <li><a href="{{ route('klinik-system') }}" class="text-on-surface-variant hover:text-primary transition-all">Sistem Klinik</a></li>
                 <li><a href="{{ route('ticket-system') }}" class="text-on-surface-variant hover:text-primary transition-all">Ticket System</a></li>
                 <li><a href="{{ route('erpsekolah-system') }}" class="text-on-surface-variant hover:text-primary transition-all">Sistem Sekolah</a></li>

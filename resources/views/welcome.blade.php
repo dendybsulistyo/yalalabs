@@ -98,7 +98,7 @@
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="mb-16">
             <h2 class="font-headline text-3xl md:text-4xl font-bold mb-4">Solusi untuk kebutuhan Anda.</h2>
-            <p class="font-body text-lg text-on-surface-variant max-w-2xl">Empat sistem siap pakai untuk klinik, sekolah, dan instansi/usaha Anda — semuanya web based, bisa dipakai lewat browser mana saja.</p>
+            <p class="font-body text-lg text-on-surface-variant max-w-2xl">Sistem siap pakai untuk klinik gigi, klinik umum, sekolah, dan instansi/usaha Anda —  web based, bisa digunakan melalui browser mana saja.</p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-gutter">
 
@@ -107,7 +107,7 @@
                 <div class="w-12 h-12 rounded-lg bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
                     <span class="material-symbols-outlined">dentistry</span>
                 </div>
-                <h3 class="font-headline text-xl font-semibold mb-3">Klinik Gigi</h3>
+                <h3 class="font-headline text-xl font-semibold mb-3">Klinik / Rumah Sakit Gigi & Mulut</h3>
                 <p class="text-sm text-on-surface-variant mb-6 flex-1">Odontogram interaktif standar Indonesia, antrian online + OTP, jadwal dokter, kasir, dan rekam medis dalam satu sistem.</p>
                 <span class="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-2 transition-all">
                     Lihat Detail
@@ -119,7 +119,7 @@
                 <div class="w-12 h-12 rounded-lg bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
                     <span class="material-symbols-outlined">local_hospital</span>
                 </div>
-                <h3 class="font-headline text-xl font-semibold mb-3">Sistem Klinik</h3>
+                <h3 class="font-headline text-xl font-semibold mb-3">Sistem Klinik / Rekam Medis</h3>
                 <p class="text-sm text-on-surface-variant mb-6 flex-1">Pendaftaran pasien, rekam medis, farmasi, laboratorium, hingga kasir — standar ICD-10, LOINC &amp; HL7 FHIR.</p>
                 <span class="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-2 transition-all">
                     Lihat Detail

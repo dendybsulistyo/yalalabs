@@ -254,6 +254,7 @@
           Minta Demo
         </a>
         <a href="#pricing" class="btn-secondary">Lihat Harga</a>
+        <a href="https://klinikgigi.opentest.web.id" target="_blank" rel="noopener" class="btn-secondary">Coba Langsung &#8599;</a>
       </div>
     </div>
     <div class="hero-image">

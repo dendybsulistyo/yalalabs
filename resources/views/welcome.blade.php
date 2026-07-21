@@ -236,7 +236,7 @@
         <div class="col-span-2 mb-10 md:mb-0">
             <a href="{{ url('/') }}" class="font-headline text-xl font-bold text-primary mb-6 block">Yala Labs</a>
             <p class="text-on-surface-variant mb-6 pr-12 text-sm leading-relaxed">
-                Kami membangun sistem informasi berbasis web siap pakai untuk sekolah, klinik, dan instansi/usaha Anda.
+                Kami membangun sistem informasi siap pakai untuk sekolah, klinik, dan instansi/usaha Anda.
             </p>
             <ul class="space-y-2 text-sm text-on-surface-variant">
                 <li>yala.web.id</li>

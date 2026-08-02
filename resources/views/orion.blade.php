@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orion Khoja Project — Supply for Industry. Solution for Property.</title>
+<meta name="description" content="Orion Khoja Project — Supply for Industry. Solution for Property. Material berkualitas untuk kinerja maksimal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          background: '#0D0D0D',
+          foreground: '#EAEAE6',
+          card: '#141414',
+          primary: '#FF4D00',
+          border: '#2E2E2E',
+          muted: '#A3A3A3',
+        },
+        fontFamily: {
+          heading: ['Montserrat', 'sans-serif'],
+          body: ['Montserrat', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #0D0D0D; color: #EAEAE6; }
+  .eyebrow { font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.3em; }
+  .hero-img { filter: saturate(1.6) contrast(1.15) brightness(1.08); }
+  .hero-overlay { background-image: linear-gradient(180deg, rgba(13,13,13,0.25) 0%, rgba(13,13,13,0.5) 55%, #0D0D0D 100%); }
+</style>
+</head>
+<body class="font-body antialiased">
+
+  <!-- Nav -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur">
+    <div class="mx-auto max-w-[1600px] px-6 lg:px-10 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <img src="{{ asset('orion-assets/logo.png') }}" alt="Orion Khoja Project" class="h-6 w-6">
+        <span class="font-heading font-extrabold uppercase tracking-wide text-sm">ORION <span class="text-primary">KHOJA</span> PROJECT</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 eyebrow text-[11px] text-muted">
+        <a href="#" class="hover:text-foreground transition-colors">HOME</a>
+        <a href="#layanan" class="hover:text-foreground transition-colors">LAYANAN</a>
+        <a href="#property" class="hover:text-foreground transition-colors">PROPERTY</a>
+        <a href="#tentang" class="hover:text-foreground transition-colors">TENTANG KAMI</a>
+        <a href="#keunggulan" class="hover:text-foreground transition-colors">KEUNGGULAN</a>
+        <a href="#hubungi" class="hover:text-foreground transition-colors">HUBUNGI KAMI</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-end overflow-hidden">
+    <img src="{{ asset('orion-assets/hero.png') }}" alt="" class="hero-img absolute inset-0 w-full h-full object-cover">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="relative mx-auto max-w-[1600px] px-6 lg:px-10 pb-20 pt-40 w-full">
+      <p class="eyebrow text-[11px] text-primary mb-6">SUPPLY FOR INDUSTRY. SOLUTION FOR PROPERTY.</p>
+      <h1 class="font-heading font-black uppercase leading-[0.9] tracking-tight text-[clamp(2.5rem,9vw,7rem)] mb-6">
+        ORION<br>KHOJA<br><span class="text-primary">PROJECT</span>
+      </h1>
+      <p class="max-w-lg text-base sm:text-lg text-foreground/80 leading-relaxed mb-10">
+        Penyedia material industri dan solusi properti terpadu. Kami menghadirkan kualitas, kepercayaan, dan profesionalisme dalam setiap kolaborasi.
+      </p>
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="#layanan" class="inline-flex items-center gap-2 bg-primary text-white font-mono text-xs tracking-[0.15em] font-semibold px-7 py-4 hover:bg-primary/90 transition-colors">
+          JELAJAHI LAYANAN
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#hubungi" class="inline-flex items-center gap-2 border border-foreground/30 text-foreground font-mono text-xs tracking-[0.15em] font-semibold px-7 py-4 hover:border-foreground transition-colors">
+          HUBUNGI KAMI
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Layanan -->
+  <section id="layanan" class="relative bg-background py-24 lg:py-32 border-t border-border">
+    <div class="mx-auto max-w-[1600px] px-6 lg:px-10">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
+        <div>
+          <p class="eyebrow text-[11px] text-primary mb-5">SUPPLY KEBUTUHAN INDUSTRI</p>
+          <h2 class="font-heading font-black uppercase leading-[0.95] tracking-tight text-[clamp(1.75rem,4.5vw,3.5rem)] max-w-2xl">
+            MATERIAL BERKUALITAS UNTUK KINERJA MAKSIMAL
+          </h2>
+        </div>
+        <p class="max-w-sm text-sm text-muted leading-relaxed">
+          Komoditas industri pilihan, disuplai dengan rantai distribusi yang andal dan kontrol kualitas yang ketat.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <article class="group">
+          <div class="relative aspect-[3/4] overflow-hidden mb-6">
+            <img src="{{ asset('orion-assets/batubara.png') }}" alt="Batu Bara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 font-mono text-[11px] text-foreground/70">01</span>
+          </div>
+          <h3 class="font-heading font-bold uppercase text-lg mb-2">Batu Bara</h3>
+          <p class="text-sm text-muted leading-relaxed mb-4">Pasokan batu bara berkualitas tinggi dengan kalori terjamin untuk kebutuhan energi industri Anda.</p>
+          <a href="#hubungi" class="eyebrow text-[10px] text-primary hover:gap-3 gap-2 inline-flex items-center transition-all">SELENGKAPNYA
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <article class="group">
+          <div class="relative aspect-[3/4] overflow-hidden mb-6">
+            <img src="{{ asset('orion-assets/nikel.png') }}" alt="Nikel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 font-mono text-[11px] text-foreground/70">02</span>
+          </div>
+          <h3 class="font-heading font-bold uppercase text-lg mb-2">Nikel</h3>
+          <p class="text-sm text-muted leading-relaxed mb-4">Material nikel premium untuk industri pengolahan logam dan manufaktur dengan standar internasional.</p>
+          <a href="#hubungi" class="eyebrow text-[10px] text-primary hover:gap-3 gap-2 inline-flex items-center transition-all">SELENGKAPNYA
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <article class="group">
+          <div class="relative aspect-[3/4] overflow-hidden mb-6">
+            <img src="{{ asset('orion-assets/hsd.png') }}" alt="High Speed Diesel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 font-mono text-[11px] text-foreground/70">03</span>
+          </div>
+          <h3 class="font-heading font-bold uppercase text-lg mb-2">High Speed Diesel</h3>
+          <p class="text-sm text-muted leading-relaxed mb-4">Solar berkualitas dengan kualitas pembakaran optimal untuk operasional industri yang efisien.</p>
+          <a href="#hubungi" class="eyebrow text-[10px] text-primary hover:gap-3 gap-2 inline-flex items-center transition-all">SELENGKAPNYA
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Property -->
+  <section id="property" class="relative bg-card py-24 lg:py-32 border-t border-border">
+    <div class="mx-auto max-w-[1600px] px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div>
+          <p class="eyebrow text-[11px] text-primary mb-5">SOLUSI PROPERTY</p>
+          <h2 class="font-heading font-black uppercase leading-[0.95] tracking-tight text-[clamp(1.75rem,4.5vw,3.5rem)] mb-6">
+            BANTUAN TERBAIK UNTUK MENJUAL ASET PROPERTI ANDA
+          </h2>
+          <p class="text-base text-muted leading-relaxed mb-8 max-w-lg">
+            Kami membantu Anda memasarkan dan menjual aset properti dengan strategi yang tepat sasaran. Dari tanah, hunian, hingga properti komersial — tim kami siap memberikan solusi terbaik.
+          </p>
+
+          <div class="grid grid-cols-5 gap-3 mb-10">
+            <div class="flex flex-col items-center gap-2 py-4 border border-border hover:border-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></svg>
+              <span class="eyebrow text-[9px] text-muted text-center">TANAH</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 py-4 border border-border hover:border-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              <span class="eyebrow text-[9px] text-muted text-center">RUMAH</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 py-4 border border-border hover:border-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/></svg>
+              <span class="eyebrow text-[9px] text-muted text-center">RUKO</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 py-4 border border-border hover:border-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted"><path d="M22 20v-9H2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"/><path d="M18 11V4H6v7"/><path d="M15 22v-4a3 3 0 0 0-3-3a3 3 0 0 0-3 3v4"/></svg>
+              <span class="eyebrow text-[9px] text-muted text-center">VILLA</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 py-4 border border-border hover:border-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/></svg>
+              <span class="eyebrow text-[9px] text-muted text-center">HOTEL</span>
+            </div>
+          </div>
+
+          <a href="#hubungi" class="inline-flex items-center gap-3 eyebrow text-xs font-semibold text-primary hover:gap-4 transition-all">PELAJARI LEBIH LANJUT
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 lg:gap-4">
+          <div class="space-y-3 lg:space-y-4">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <img src="{{ asset('orion-assets/tanah.png') }}" alt="Tanah properti" class="w-full h-full object-cover">
+              <span class="absolute bottom-4 left-4 font-mono text-[10px] tracking-[0.2em] bg-background/70 backdrop-blur px-3 py-1.5">TANAH</span>
+            </div>
+            <div class="relative aspect-square overflow-hidden">
+              <img src="{{ asset('orion-assets/komersial.png') }}" alt="Properti komersial" class="w-full h-full object-cover">
+              <span class="absolute bottom-4 left-4 font-mono text-[10px] tracking-[0.2em] bg-background/70 backdrop-blur px-3 py-1.5">RUMAH</span>
+            </div>
+          </div>
+          <div class="relative aspect-[3/4] overflow-hidden mt-8 lg:mt-12">
+            <img src="{{ asset('orion-assets/tanah.png') }}" alt="Properti hotel" class="w-full h-full object-cover">
+            <span class="absolute bottom-4 left-4 font-mono text-[10px] tracking-[0.2em] bg-background/70 backdrop-blur px-3 py-1.5">HOTEL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keunggulan -->
+  <section id="keunggulan" class="relative bg-background py-24 lg:py-32 border-t border-border">
+    <div class="mx-auto max-w-[1600px] px-6 lg:px-10">
+      <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+        <p class="eyebrow text-[11px] text-primary mb-5">KEUNGGULAN KAMI</p>
+        <h2 class="font-heading font-black uppercase leading-[0.95] tracking-tight text-[clamp(1.75rem,5vw,3.5rem)]">
+          KENAPA MEMILIH ORION KHOJA PROJECT?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+        <div class="bg-background p-8">
+          <div class="flex items-center justify-between mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+            <span class="font-mono text-xs text-muted">01</span>
+          </div>
+          <h3 class="font-heading font-bold uppercase text-base mb-3">Kualitas Terjamin</h3>
+          <p class="text-sm text-muted leading-relaxed">Setiap material dan layanan kami melewati kontrol kualitas yang ketat dan terstandar.</p>
+        </div>
+        <div class="bg-background p-8">
+          <div class="flex items-center justify-between mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+            <span class="font-mono text-xs text-muted">02</span>
+          </div>
+          <h3 class="font-heading font-bold uppercase text-base mb-3">Supply Terpercaya</h3>
+          <p class="text-sm text-muted leading-relaxed">Rantai distribusi andal dengan jadwal pengiriman yang konsisten dan tepat waktu.</p>
+        </div>
+        <div class="bg-background p-8">
+          <div class="flex items-center justify-between mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span class="font-mono text-xs text-muted">03</span>
+          </div>
+          <h3 class="font-heading font-bold uppercase text-base mb-3">Harga Kompetitif</h3>
+          <p class="text-sm text-muted leading-relaxed">Penawaran terbaik dengan keseimbangan kualitas dan harga yang menguntungkan.</p>
+        </div>
+        <div class="bg-background p-8">
+          <div class="flex items-center justify-between mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="font-mono text-xs text-muted">04</span>
+          </div>
+          <h3 class="font-heading font-bold uppercase text-base mb-3">Layanan Profesional</h3>
+          <p class="text-sm text-muted leading-relaxed">Tim berpengalaman yang siap mendampingi Anda dari konsultasi hingga eksekusi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="tentang" class="relative bg-primary text-white py-20 lg:py-28">
+    <div class="mx-auto max-w-[1600px] px-6 lg:px-10 flex flex-col lg:flex-row lg:items-center justify-between gap-10">
+      <div>
+        <p class="eyebrow text-[11px] text-white/70 mb-4">MARI BERBAGAI</p>
+        <h2 class="font-heading font-black uppercase leading-[0.95] tracking-tight text-[clamp(2rem,5vw,3.5rem)] max-w-2xl mb-4">
+          SIAP BERKOLABORASI UNTUK KEBUTUHAN ANDA?
+        </h2>
+        <p class="max-w-xl text-white/85 text-base leading-relaxed">
+          Tim kami siap mendiskusikan kebutuhan material industri maupun solusi properti Anda. Hubungi kami hari ini untuk konsultasi gratis.
+        </p>
+      </div>
+      <a href="#hubungi" class="shrink-0 inline-flex items-center gap-3 bg-background text-foreground font-mono text-xs tracking-[0.15em] font-semibold px-7 py-4 hover:bg-card transition-colors">
+        HUBUNGI KAMI SEKARANG
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="hubungi" class="relative bg-background border-t border-border pt-16 pb-8">
+    <div class="mx-auto max-w-[1600px] px-6 lg:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="{{ asset('orion-assets/logo.png') }}" alt="Orion Khoja Project" class="h-6 w-6">
+            <span class="font-heading font-extrabold uppercase tracking-wide text-sm">ORION <span class="text-primary">KHOJA</span> PROJECT</span>
+          </div>
+          <p class="text-sm text-muted leading-relaxed max-w-xs">
+            Penyedia material industri dan solusi properti terpadu. Kami berkomitmen menghadirkan kualitas, kepercayaan, dan profesionalisme dalam setiap kolaborasi.
+          </p>
+        </div>
+        <div>
+          <p class="eyebrow text-[11px] text-primary mb-5">LINK CEPAT</p>
+          <ul class="space-y-3 text-sm text-muted">
+            <li><a href="#" class="hover:text-foreground transition-colors">Home</a></li>
+            <li><a href="#layanan" class="hover:text-foreground transition-colors">Layanan</a></li>
+            <li><a href="#property" class="hover:text-foreground transition-colors">Property</a></li>
+            <li><a href="#tentang" class="hover:text-foreground transition-colors">Tentang Kami</a></li>
+            <li><a href="#keunggulan" class="hover:text-foreground transition-colors">Keunggulan</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow text-[11px] text-primary mb-5">HUBUNGI KAMI</p>
+          <ul class="space-y-3 text-sm text-muted">
+            <li>+62 812 3456 7890</li>
+            <li>info@orionkhoja.com</li>
+            <li>Jakarta, Indonesia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-border pt-8 text-center">
+        <p class="font-mono text-[11px] tracking-[0.1em] text-muted">© 2024 ORION KHOJA PROJECT. ALL RIGHTS RESERVED.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

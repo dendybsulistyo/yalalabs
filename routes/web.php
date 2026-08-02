@@ -9,6 +9,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/orion', function () {
+    return view('orion');
+})->name('orion');
+
 Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 
 Route::post('/contact', [ContactController::class, 'store'])

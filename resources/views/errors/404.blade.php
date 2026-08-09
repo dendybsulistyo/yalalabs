@@ -34,7 +34,7 @@
         <p class="font-headline text-gradient-red font-bold leading-none tracking-tight text-[7rem] md:text-[10rem]">404</p>
 
         <h1 class="font-headline text-3xl md:text-4xl font-bold mb-6 mt-2 leading-[1.1] tracking-tight max-w-xl">
-            Sepertinya halaman ini tersesat di server.
+            Halaman tidak ditemukan..
         </h1>
         <p class="font-body text-lg text-on-surface-variant mb-10 max-w-xl leading-relaxed">
             Alamat yang Anda tuju sudah pindah, berganti nama, atau memang belum pernah ada.
@@ -80,6 +80,7 @@
 </header>
 
 <!-- Footer -->
+<br><br>
 <footer class="w-full py-8 bg-surface-container-lowest border-t border-surface-container-highest">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-on-surface-variant text-xs">© 2026 Yala Labs. support by CV. Andita Yogyakarta.</p>

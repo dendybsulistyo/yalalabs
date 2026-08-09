@@ -80,9 +80,8 @@
 </header>
 
 <!-- Footer -->
-<br><br>
 <footer class="w-full py-8 bg-surface-container-lowest border-t border-surface-container-highest">
-    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
+    <br><br><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-on-surface-variant text-xs">© 2026 Yala Labs. support by CV. Andita Yogyakarta.</p>
         <p class="text-on-surface-variant text-xs">yala.web.id · halloooyala@gmail.com</p>
     </div>

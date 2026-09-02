@@ -19,8 +19,8 @@
             <a href="{{ url('/') }}" class="font-headline text-xl font-bold text-primary tracking-tight">Yala Labs</a>
             <div class="hidden md:flex items-center gap-8">
                 <a href="#produk" class="text-on-surface-variant hover:text-primary transition-colors text-sm">Produk</a>
-                <a href="#ekosistem" class="text-on-surface-variant hover:text-primary transition-colors text-sm">Ekosistem</a>
-                <a href="{{ route('klinikgigi-system') }}" class="text-primary font-semibold text-sm">Klinik Gigi — Baru</a>
+                <a href="{{ route('about') }}" class="text-on-surface-variant hover:text-primary transition-colors text-sm">Tentang Kami</a>
+                <a href="{{ route('humanresource-system') }}" class="text-primary font-semibold text-sm">Human Resource — Baru</a>
             </div>
         </div>
         <a href="{{ route('contact') }}"
@@ -30,7 +30,7 @@
     </div>
 </nav>
 
-<!-- Hero — sorotan produk baru: Klinik Gigi -->
+<!-- Hero — sorotan produk baru: Human Resource -->
 <header class="relative pt-16 pb-24 md:pb-section-gap overflow-hidden">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
         <div class="max-w-2xl">
@@ -39,21 +39,19 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-                BARU DILUNCURKAN...
+                SOLUSI UNGGULAN...
             </div>
             <h1 class="font-headline text-4xl md:text-6xl font-bold mb-6 leading-[1.1] tracking-tight">
-                Manajemen Pasien Gigi & Mulut, <span class="text-gradient-red"><br>Go Digital.</span>
+                Kelola Tim Anda, <span class="text-gradient-red"><br>Lebih Terarah.</span>
             </h1>
             <p class="font-body text-lg text-on-surface-variant mb-10 max-w-xl leading-relaxed">
-    
-                Produk terbaru Yala Labs, <strong class="text-on-surface">Manajemen Pasien Gigi & Mulut</strong>, hadir dengan odontogram
-                interaktif standar Indonesia, antrian online terverifikasi OTP, hingga manajemen jadwal dokter —
-                semua dalam satu platform.
+                <strong class="text-on-surface">Sistem Human Resource</strong> dari Yala Labs membantu organisasi mengelola data pegawai,
+                presensi, cuti &amp; izin, perjalanan dinas, hingga payroll — semua dalam satu platform yang rapi.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="{{ route('klinikgigi-system') }}"
+                <a href="{{ route('humanresource-system') }}"
                    class="bg-primary text-on-primary px-8 py-4 rounded-lg font-semibold shadow-lg hover:opacity-90 transition-all active:scale-95 flex items-center justify-center group">
-                    Lihat Sistem Klinik Gigi
+                    Lihat Sistem Human Resource
                     <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </a>
                 <a href="{{ route('contact') }}"
@@ -71,7 +69,7 @@
                     <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
                     <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 </div>
-                <img src="{{ asset('images/klinikgigi/login.png') }}" alt="Sistem Klinik Gigi — Halaman Login" class="w-full block">
+                <img src="{{ asset('images/humanresource/dashboard-preview.svg') }}" alt="Sistem Human Resource — Dashboard" class="w-full block">
             </div>
         </div>
     </div>
@@ -100,10 +98,9 @@
             <h2 class="font-headline text-3xl md:text-4xl font-bold mb-4">Solusi untuk kebutuhan Anda.</h2>
             <p class="font-body text-lg text-on-surface-variant max-w-2xl">Sistem siap pakai untuk klinik gigi, klinik umum, sekolah, dan instansi/usaha Anda —  web based, bisa digunakan melalui browser mana saja.</p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-gutter">
 
             <a href="{{ route('klinikgigi-system') }}" class="relative p-8 rounded-xl bg-surface-container-lowest border-2 border-primary/20 hover-lift group flex flex-col">
-                <span class="absolute -top-3 left-8 bg-primary text-on-primary text-[10px] font-label font-bold tracking-widest uppercase px-3 py-1 rounded-full">Baru</span>
                 <div class="w-12 h-12 rounded-lg bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
                     <span class="material-symbols-outlined">dentistry</span>
                 </div>
@@ -151,7 +148,33 @@
                 </span>
             </a>
 
+            <a href="{{ route('humanresource-system') }}" class="relative p-8 rounded-xl bg-surface-container-lowest border-2 border-primary/20 hover-lift group flex flex-col">
+                <span class="absolute -top-3 left-8 bg-primary text-on-primary text-[10px] font-label font-bold tracking-widest uppercase px-3 py-1 rounded-full">Baru</span>
+                <div class="w-12 h-12 rounded-lg bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined">groups</span>
+                </div>
+                <h3 class="font-headline text-xl font-semibold mb-3">Sistem Human Resource</h3>
+                <p class="text-sm text-on-surface-variant mb-6 flex-1">Data pegawai, presensi, cuti &amp; izin, perjalanan dinas, sampai payroll dalam satu sistem terintegrasi.</p>
+                <span class="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+                    Lihat Detail
+                    <span class="material-symbols-outlined ml-1 text-sm">arrow_outward</span>
+                </span>
+            </a>
+
         </div>
+    </div>
+</section>
+
+<!-- Bonus Demo -->
+<section class="pb-16 md:pb-24">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <a href="https://dental-ani-ganes.vercel.app/" target="_blank" rel="noopener noreferrer" class="group flex flex-col gap-5 rounded-xl border border-primary/20 bg-primary/5 p-6 transition-all hover:border-primary/40 hover:bg-primary/10 md:flex-row md:items-center md:justify-between">
+            <div class="flex items-start gap-4">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary text-on-primary"><span class="material-symbols-outlined">dentistry</span></div>
+                <div><p class="font-label text-[10px] font-bold uppercase tracking-[.14em] text-primary">Fun Project</p><h3 class="mt-1 font-headline text-lg font-semibold text-on-surface">Demo Dental Info </h3><p class="mt-1 text-sm leading-relaxed text-on-surface-variant">Website untuk mempelajari Gigi Geligi.</p></div>
+            </div>
+            <span class="inline-flex shrink-0 items-center font-semibold text-primary">Buka demo <span class="material-symbols-outlined ml-1 text-lg transition-transform group-hover:translate-x-1">arrow_outward</span></span>
+        </a>
     </div>
 </section>
 
@@ -256,11 +279,13 @@
                 <li><a href="{{ route('klinik-system') }}" class="text-on-surface-variant hover:text-primary transition-all">Sistem Klinik</a></li>
                 <li><a href="{{ route('ticket-system') }}" class="text-on-surface-variant hover:text-primary transition-all">Ticket System</a></li>
                 <li><a href="{{ route('erpsekolah-system') }}" class="text-on-surface-variant hover:text-primary transition-all">Sistem Sekolah</a></li>
+                <li><a href="{{ route('humanresource-system') }}" class="text-on-surface-variant hover:text-primary transition-all">Sistem Human Resource</a></li>
             </ul>
         </div>
         <div>
             <h5 class="font-semibold text-primary mb-6 text-sm">Perusahaan</h5>
             <ul class="space-y-3 text-sm">
+                <li><a href="{{ route('about') }}" class="text-on-surface-variant hover:text-primary transition-all">Tentang Kami</a></li>
                 <li><a href="{{ route('contact') }}" class="text-on-surface-variant hover:text-primary transition-all">Konsultasi Gratis</a></li>
                 <li><a href="mailto:halloooyala@gmail.com" class="text-on-surface-variant hover:text-primary transition-all">Kontak Email</a></li>
             </ul>

@@ -254,6 +254,7 @@
           Minta Demo
         </a>
         <a href="#pricing" class="btn-secondary">Lihat Harga</a>
+        <a href="#ekosistem" class="btn-secondary">Ekosistem</a>
         <a href="https://klinikgigi.opentest.web.id" target="_blank" rel="noopener" class="btn-secondary">Coba Langsung &#8599;</a>
       </div>
     </div>
@@ -297,10 +298,10 @@
   </div>
 
   <!-- Fitur + Pricing -->
-  <div class="bottom-grid">
+  <div class="bottom-grid" id="ekosistem">
 
     <div>
-      <p class="section-label">Fitur Utama</p>
+      <p class="section-label">Ekosistem Klinik Gigi</p>
       <div class="feature-list">
 
         <div class="feature-item">

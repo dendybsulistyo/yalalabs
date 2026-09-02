@@ -9,6 +9,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/tentang-kami', 'about')->name('about');
+
 // Route::get('/orion', function () {
 //     return view('orion');
 // })->name('orion');
@@ -37,6 +39,10 @@ Route::get('/apps/klinikgigi-system', function () {
 Route::get('/apps/erpsekolah-system', function () {
     return view('apps.erpsekolah-system');
 })->name('erpsekolah-system');
+
+Route::get('/apps/humanresource-system', function () {
+    return view('apps.humanresource-system');
+})->name('humanresource-system');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'show'])->name('login');

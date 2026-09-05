@@ -10,6 +10,7 @@ Route::get('/', function () {
 });
 
 Route::view('/tentang-kami', 'about')->name('about');
+Route::view('/portofolio', 'portfolio')->name('portfolio');
 
 // Route::get('/orion', function () {
 //     return view('orion');

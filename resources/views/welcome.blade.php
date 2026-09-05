@@ -19,6 +19,7 @@
             <a href="{{ url('/') }}" class="font-headline text-xl font-bold text-primary tracking-tight">Yala Labs</a>
             <div class="hidden md:flex items-center gap-8">
                 <a href="#produk" class="text-on-surface-variant hover:text-primary transition-colors text-sm">Produk</a>
+                <a href="{{ route('portfolio') }}" class="text-on-surface-variant hover:text-primary transition-colors text-sm">Portofolio</a>
                 <a href="{{ route('about') }}" class="text-on-surface-variant hover:text-primary transition-colors text-sm">Tentang Kami</a>
                 <a href="{{ route('humanresource-system') }}" class="text-primary font-semibold text-sm">Human Resource — Baru</a>
             </div>
